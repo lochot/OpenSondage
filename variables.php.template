@@ -40,6 +40,9 @@
 // Nom du serveur
 const STUDS_URL = 'www.mon_domaine.coop';
 
+// repertoire contenant
+const STUDS_DIR = 'my_dir/';
+
 // Nom de l'application
 const NOMAPPLICATION = "<nom de l'application>";
 
