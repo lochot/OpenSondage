@@ -53,7 +53,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   echo '<head>'."\n";
   echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'."\n";
   echo '<title>'.NOMAPPLICATION.'</title>'."\n";
-  echo '<link rel="stylesheet" type="text/css" href="style.css">'."\n";
+  echo '<link rel="stylesheet" type="text/css" href="/'.STUDS_DIR.'style.css">'."\n";
   echo '</head>'."\n";
   echo '<body>'."\n";
   framanav();
@@ -62,7 +62,7 @@ if (issetAndNoEmpty('titre', $_SESSION) === false || issetAndNoEmpty('nom', $_SE
   bandeau_titre(_("Error!"));
   echo '<div class=corpscentre>'."\n";
   print "<H2>" . _("You haven't filled the first section of the poll creation.") . " !</H2>"."\n";
-  print "" . _("Back to the homepage of ") . " <a href=\"index.php\"> ".NOMAPPLICATION."</A>."."\n";
+  print "" . _("Back to the homepage of ") . " <a href=\"".STUDS_DIR."index.php\"> ".NOMAPPLICATION."</A>."."\n";
   echo '<br><br><br>'."\n";
   echo '</div>'."\n";
   //bandeau de pied
