@@ -117,8 +117,8 @@ function print_header($js = false, $nom_sondage = '')
     <title>'.NOMAPPLICATION.'</title>';
   }
   echo '
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <link rel="stylesheet" type="text/css" href="/print.css" media="print">';
+    <link rel="stylesheet" type="text/css" href="/'.STUDS_DIR.'style.css">
+    <link rel="stylesheet" type="text/css" href="/'.STUDS_DIR.'print.css" media="print">';
 
   echo '</head>';
 }
@@ -225,9 +225,9 @@ function getUrlSondage($id, $admin = false)
     }
   } else {
     if ($admin === true) {
-      $url = get_server_name().'adminstuds.php?sondage='.$id;
+      $url = get_server_name().STUDS_DIR.'adminstuds.php?sondage='.$id;
     } else {
-      $url = get_server_name().'studs.php?sondage='.$id;
+      $url = get_server_name().STUDS_DIR.'studs.php?sondage='.$id;
     }
   }
 
