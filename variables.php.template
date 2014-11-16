@@ -84,6 +84,11 @@ const IMAGE_TITRE = 'images/logo-framadate.png';
 // Activation des URL propre (true pour activer, false sinon)
 const URL_PROPRE = false;
 
+//Activation de piwik (false si inactif, l'url de piwik sinon) (ex : const PIWIK_URL = 'domain.tld/piwik/';)
+const PIWIK_URL = false ;
+//Id du site dans piwik
+const PIWIK_SITE_ID = 1;
+
 // Activation de Google Analytics (false si inactif, l'identifiant sinon)
 const GOOGLE_ANALYTICS_ID =  false;
 
