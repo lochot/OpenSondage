@@ -47,7 +47,7 @@ function framanav()
     include_once($_SERVER['DOCUMENT_ROOT']."/framanav/nav.php");
     //echo '<!-- /Framanav --> '."\n";
     }*/
-    echo '<script src="/nav/nav.js" id="nav_js" type="text/javascript" charset="utf-8"></script>'."\n";
+    echo '<script src="'.STUDS_DIR.'/nav/nav.js" id="nav_js" type="text/javascript" charset="utf-8"></script>'."\n";
 }
 
 function gAnalytics() {
@@ -83,7 +83,7 @@ function bandeau_tete()
 {
   if ( IMAGE_TITRE ) {
 
-    echo '<div class="bandeau"><a href="/" title="Accueil '.NOMAPPLICATION.'"><img src="/' . IMAGE_TITRE. '" title="Accueil '.NOMAPPLICATION.'" alt="'.NOMAPPLICATION.'"></a></div>'."\n";
+    echo '<div class="bandeau"><a href="/" title="Accueil '.NOMAPPLICATION.'"><img src="/' . STUDS_DIR . IMAGE_TITRE. '" title="Accueil '.NOMAPPLICATION.'" alt="'.NOMAPPLICATION.'"></a></div>'."\n";
 
   } else {
 
@@ -133,13 +133,13 @@ function sous_bandeau()
 function sous_bandeau_admin()
 {
   echo '<div class="sousbandeau">' .
-       '<a class="button small gray" href="/">'. _("Home") .'</a>';
+       '<a class="button small gray" href="/'.STUDS_DIR.'">'. _("Home") .'</a>';
 
   if(is_readable('logs_studs.txt')) {
-    echo '<a class="button small gray" href="/admin/logs_studs.txt">'. _("Logs") .'</a>';
+    echo '<a class="button small gray" href="/'.STUDS_DIR.'admin/logs_studs.txt">'. _("Logs") .'</a>';
   }
 
-  echo '<a class="button small gray" href="/../scripts/nettoyage_sondage.php">'. _("Cleaning") .'</a>' .
+  echo '<a class="button small gray" href="/'.STUDS_DIR.'../scripts/nettoyage_sondage.php">'. _("Cleaning") .'</a>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
        '</div>'."\n";
@@ -168,11 +168,11 @@ function bandeau_pied()
   //echo '<div class="bandeaupied">'. _("Universit&eacute; de Strasbourg. Creation: Guilhem BORGHESI. 2008-2009") .'</div>'."\n";
   echo '<div class="separateur">&nbsp;</div>';
   echo '<div class="sousbandeau">' .
-       '<a class="button small gray" href="/">'. _("Home") .'</a>' .
+       '<a class="button small gray" href="/'.STUDS_DIR.'">'. _("Home") .'</a>' .
        '<a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a>' .
        '<a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a>' .
        //'<a href="/sources/sources.php">'. _("Sources") .'</a>' . //not implemented
-       '<a class="button small gray" href="/apropos.php">'. _("About") .'</a>' .
+       '<a class="button small gray" href="/'.STUDS_DIR.'apropos.php">'. _("About") .'</a>' .
        //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
@@ -187,11 +187,11 @@ function bandeau_pied_mobile()
        '<div class="bandeaupiedmobile">'. _("Universit&eacute; de Strasbourg. Creation: Guilhem BORGHESI. 2008-2009") .'</div>'."\n";*/
        echo '<div class="separateur">&nbsp;</div>';
   echo '<div class="sousbandeau">' .
-       '<a class="button small gray" href="/">'. _("Home") .'</a>' .
+       '<a class="button small gray" href="/'.STUDS_DIR.'">'. _("Home") .'</a>' .
        '<a class="button small gray" href="' . getUrlSondage('aqg259dth55iuhwm').'">'. _("Example") .'</a>' .
        '<a class="button small gray" href="http://contact.framasoft.org" target="_new">'. _("Contact") .'</a>' .
        //'<a href="/sources/sources.php">'. _("Sources") .'</a>' . //not implemented
-       '<a class="button small gray" href="/apropos.php">'. _("About") .'</a>' .
+       '<a class="button small gray" href="/'.STUDS_DIR.'apropos.php">'. _("About") .'</a>' .
        //'<a class="button small gray" href="/admin/index.php">'. _("Admin") .'</a>' .
        '<span class="sousbandeau sousbandeaulangue">' .
        liste_lang() . '</span>'.
